@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHORI KA MAAL - CHORI KAR KE PADHO</title>
+    <meta name="description"
+        content="Access comprehensive study materials, previous year questions, and resources for engineering students">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+                <span>CHORI KA MAAL</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#resources">Resources</a>
+                <a href="#about">About</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>EIGHT IDIOTS OF KMCLU LUCKNOW</h1>
+
+                <p>Access comprehensive study materials, previous year questions, and resources to excel in your
+                    engineering journey.</p>
+                <p>Everything provided here is from the student's notes, so please double-check as there might be
+                    mistakes.</p>
+                <div class="hero-buttons">
+                    <a href="#resources" class="primary-btn">Get Started</a>
+                    <a href="#features" class="secondary-btn">Learn More →</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero.avif" alt="Students studying">
+            </div>
+        </div>
+    </header>
+
+    <section id="resources" class="resources">
+        <div class="section-content">
+            <h2>AAO GADHO PADHO</h2>
+            <p class="section-subtitle">Explore resources categorized by year and branch</p>
+            <div class="year-section">
+                <h3>First Year</h3>
+                <div class="branch-grid">
+                    <div class="branch-card">
+                        <h4>CSE</h4>
+                        <p>Mathematics, Physics, C Programming, and more</p>
+                        <button class="buttons1 buttons" onclick="showSubjects('cse')">Semester 1</button>
+                        <div id="cse-subjects" class="subjects-container" style="display: none;">
+                            <button class="subject-btn" onclick="showSubjectOptions('cse', 'Basic Electrical')">Basic
+                                Electrical</button>
+                            <button class="subject-btn" onclick="showSubjectOptions('cse', 'Physics')">Physics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('cse', 'Mechanics')">Mechanics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('cse', 'Mathematics')">Mathematics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('cse', 'AIML & Fashion Design')">AIML & Fashion
+                                Design</button>
+                            <button class="subject-btn" onclick="showSubjectOptions('cse', 'EVS')">EVS</button>
+                        </div>
+
+                        <div id="cse-subject-options" class="subject-options-container" style="display: none;">
+                            <h4 id="cse-subject-name"></h4>
+                            <!-- Notes Buttons -->
+                            <div id="notes-buttons">
+                            <button data-subject="Basic Electrical"
+                                onclick="openNotes('cse', 'Basic Electrical')">Notes</button>
+                            <button data-subject="Physics" onclick="openNotes('cse', 'Physics')">Notes</button>
+                            <button data-subject="Mechanics" onclick="openNotes('cse', 'Mechanics')">Notes</button>
+                            <button data-subject="Mathematics" onclick="openNotes('cse', 'Mathematics')">Notes</button>
+                            <button data-subject="AIML & Fashion Design"
+                                onclick="openNotes('cse', 'AIML & Fashion Design')">Notes</button>
+                            <button data-subject="EVS" onclick="openNotes('cse', 'EVS')">Notes</button>
+                            </div>
+                            <div id="pyqs-buttons">
+                            <!-- PYQs Buttons -->
+                            <button data-subject="Basic Electrical"
+                                onclick="openPYQs('cse', 'Basic Electrical')">PYQs</button>
+                            <button data-subject="Physics" onclick="openPYQs('cse', 'Physics')">PYQs</button>
+                            <button data-subject="Mechanics" onclick="openPYQs('cse', 'Mechanics')">PYQs</button>
+                            <button data-subject="Mathematics" onclick="openPYQs('cse', 'Mathematics')">PYQs</button>
+                            <button data-subject="AIML & Fashion Design"
+                                onclick="openPYQs('cse', 'AIML & Fashion Design')">PYQs</button>
+                            <button data-subject="EVS" onclick="openPYQs('cse', 'EVS')">PYQs</button>
+                        </div>
+                        </div>
+                        <button class="buttons2 buttons">Semester 2</button>
+                    </div>
+                    <div class="branch-card">
+                        <h4>CSE AIML</h4>
+                        <p>Mathematics, Physics, Introduction to AI & ML, and more</p>
+                        <button class="buttons1.1 buttons" onclick="showSubjects('aiml')">Semester 1</button>
+                        <div id="aiml-subjects" class="subjects-container" style="display: none;">
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aiml', 'Mechanics')">Mechanics</button>
+                            <button class="subject-btn" onclick="showSubjectOptions('aiml', 'Physics')">Physics</button>
+                            <button class="subject-btn" onclick="showSubjectOptions('aiml', 'Design Thinking')">Design
+                                Thinking</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aiml', 'Mathematics')">Mathematics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aiml', 'Electrical')">Electrical</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aiml', 'Environmental Science')">Environmental
+                                Science</button>
+                        </div>
+                        <div id="aiml-subject-options" class="subject-options-container" style="display: none;">
+                            <h4 id="aiml-subject-name"></h4>
+                            <div id="notes-buttons">
+                            <button data-subject="Mechanics" onclick="openNotes('aiml', 'Mechanics')">Notes</button>
+                            <button data-subject="Physics" onclick="openNotes('aiml', 'Physics')">Notes</button>
+                            <button data-subject="Design Thinking"
+                                onclick="openNotes('aiml', 'Design Thinking')">Notes</button>
+                            <button data-subject="Mathematics" onclick="openNotes('aiml', 'Mathematics')">Notes</button>
+                            <button data-subject="Electrical" onclick="openNotes('aiml', 'Electrical')">Notes</button>
+                            <button data-subject="Environmental Science"
+                                onclick="openNotes('aiml', 'Environmental Science')">Notes</button>
+                                </div>
+                                <div id="pyqs-buttons">
+                            <!-- PYQs Buttons -->
+                            <button data-subject="Mechanics"
+                                onclick="openPYQs('aiml', 'Mechanics')">PYQs</button>
+                            <button data-subject="Physics" onclick="openPYQs('aiml', 'Physics')">PYQs</button>
+                            <button data-subject="Design Thinking" onclick="openPYQs('aiml', 'Design Thinking')">PYQs</button>
+                            <button data-subject="Mathematics" onclick="openPYQs('aiml', 'Mathematics')">PYQs</button>
+                            <button data-subject="Electrical"
+                                onclick="openPYQs('aiml', 'Electrical')">PYQs</button>
+                            <button data-subject="Environmental Science" onclick="openPYQs('aiml', 'Environmental Science')">PYQs</button>
+                                </div>
+                        </div>
+                        <button class="buttons2.2  buttons">Semester 2</button>
+
+                    </div>
+                    <div class="branch-card">
+                        <h4>CSE AIDS</h4>
+                        <p>Mathematics, Physics, Introduction to AI & DS, and more</p>
+                        <button class="buttons1.1 buttons" onclick="showSubjects('aids')">Semester 1</button>
+                        <div id="aids-subjects" class="subjects-container" style="display: none;">
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aids', 'Chemistry')">Chemistry</button>
+                            <button class="subject-btn" onclick="showSubjectOptions('aids', 'C Programming')">C
+                                Programming</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aids', 'Manufacturing')">Manufacturing</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aids', 'Mathematics')">Mathematics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aids', 'Electronics')">Electronics</button>
+                            <button class="subject-btn"
+                                onclick="showSubjectOptions('aids', 'Professional Communication')">Professional
+                                Communication</button>
+                        </div>
+                        <div id="aids-subject-options" class="subject-options-container" style="display: none;">
+                            <h4 id="aids-subject-name"></h4>
+                            <div id="notes-buttons">
+                            <!-- Notes buttons with data-subject attribute -->
+                            <button data-subject="Chemistry" onclick="openNotes('aids', 'Chemistry')"
+                                style="display:none;">Notes</button>
+                            <button data-subject="Manufacturing" onclick="openNotes('aids', 'Manufacturing')"
+                                style="display:none;">Notes</button>
+                            <button data-subject="Electronics" onclick="openNotes('aids', 'Electronics')"
+                                style="display:none;">Notes</button>
+                            <button data-subject="Mathematics" onclick="openNotes('aids', 'Mathematics')"
+                                style="display:none;">Notes</button>
+                            <button data-subject="Professional Communication"
+                                onclick="openNotes('aids', 'Professional Communication')"
+                                style="display:none;">Notes</button>
+                            <button data-subject="C Programming" onclick="openNotes('aids', 'C Programming')"
+                                style="display:none;">Notes</button>
+                            </div>
+                            <div id="pyqs-buttons">
+
+ <!-- PYQs Buttons -->
+ <button data-subject="Chemistry"
+ onclick="openPYQs('aids', 'Chemistry')">PYQs</button>
+<button data-subject="Manufacturing" onclick="openPYQs('aids', 'Manufacturing')">PYQs</button>
+<button data-subject="Electronics" onclick="openPYQs('aids', 'Electronics')">PYQs</button>
+<button data-subject="Mathematics" onclick="openPYQs('aids', 'Mathematics')">PYQs</button>
+<button data-subject="Professional Communication"
+ onclick="openPYQs('aids', 'Professional Communication')">PYQs</button>
+<button data-subject="C Programming" onclick="openPYQs('aids', 'C Programming')">PYQs</button>
+                            </div>                          
+                        </div>
+                        <button class="buttons2.1 buttons">Semester 2</button>
+                    </div>
+
+                    <div class="branch-card">
+                        <h4>Biotechnology</h4>
+                        <p>Biology, Chemistry, Environmental Science, and more</p>
+                        <button class="buttons1.3  buttons">Semester 1</button>
+                        <button class="buttons2.3  buttons">Semester 2</button>
+                    </div>
+                    <div class="branch-card">
+                        <h4>Civil</h4>
+                        <p>Engineering Drawing, Mechanics, Mathematics, and more</p>
+                        <button class="buttons1.4  buttons">Semester 1</button>
+                        <button class="buttons2.4  buttons">Semester 2</button>
+                    </div>
+                    <div class="branch-card">
+                        <h4>Mechanical</h4>
+                        <p>Engineering Mechanics, Thermodynamics, and more</p>
+                        <button class="buttons1.5  buttons">Semester 1</button>
+                        <button class="buttons2.5  buttons">Semester 2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="year-section">
+            <h3>Second Year</h3>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <h4>CSE</h4>
+                    <p>Data Structures, OOP, Algorithms, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIML</h4>
+                    <p>Data Structures, OOP, AI Models, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIDS</h4>
+                    <p>Algorithms, Data Science Applications, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Biotechnology</h4>
+                    <p>Genetics, Biochemistry, Microbiology, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Civil</h4>
+                    <p>Structural Analysis, Surveying, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Mechanical</h4>
+                    <p>Fluid Mechanics, Heat Transfer, and more</p>
+                    <button class="buttons3.2  buttons">Semester 3</button>
+                    <button class="buttons4.2  buttons">Semester 4</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="year-section">
+            <h3>Third Year</h3>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <h4>CSE</h4>
+                    <p>Operating Systems, Databases, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIML</h4>
+                    <p>Machine Learning, AI Models, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIDS</h4>
+                    <p>Data Analytics, Big Data, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Biotechnology</h4>
+                    <p>Industrial Biotech, Enzyme Tech, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Civil</h4>
+                    <p>Environmental Engineering, Hydraulics, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Mechanical</h4>
+                    <p>Machine Design, Dynamics, and more</p>
+                    <button class="buttons5.3  buttons">Semester 5</button>
+                    <button class="buttons6.3  buttons">Semester 6</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="year-section">
+            <h3>Fourth Year</h3>
+            <div class="branch-grid">
+                <div class="branch-card">
+                    <h4>CSE</h4>
+                    <p>Project Work, Cloud Computing, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIML</h4>
+                    <p>Deep Learning, AI Projects, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+                <div class="branch-card">
+                    <h4>CSE AIDS</h4>
+                    <p>Big Data, Capstone Projects, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Biotechnology</h4>
+                    <p>Bioinformatics, Research, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Civil</h4>
+                    <p>Capstone Projects, Transportation, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+                <div class="branch-card">
+                    <h4>Mechanical</h4>
+                    <p>Robotics, Advanced Design, and more</p>
+                    <button class="buttons7.4  buttons">Semester 7</button>
+                    <button class="buttons8.4  buttons">Semester 8</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="footer-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+                <p>&copy; 2024 CHORI KA MAAL. All rights reserved.</p>
+                <p>Created by Faisal Zafar, empowering students at every step of their journey.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
